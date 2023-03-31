@@ -7,7 +7,7 @@ const AddedDish = ({ setText, count }) => {
         <div className='dish-item'>
             <p>Total items in cart: {count}</p>
             <div className='cart-item'>
-            {setText.map((text, index) => (<p key={index}>{text}</p>))}
+            {setText.map((text) => (<p>{text}</p>))}
             {/* <p>{setText ? setText : 'None'} </p> */}
             </div>
         </div>

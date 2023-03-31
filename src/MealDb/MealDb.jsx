@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import swal from 'sweetalert';
 import AddedDish from '../AddedDish/AddedDish';
 import Foodcard from '../FoodCard/Foodcard';
 import './MealDb.css'
@@ -20,7 +21,7 @@ const MealDb = () => {
          
         const clickedText=props;
         if (text.includes(clickedText)) {
-            return;
+            return swal("OOOPSSSSSS!", "...This itme is already added!");
           }
           else{
             setText(prevText => prevText.concat(clickedText));
