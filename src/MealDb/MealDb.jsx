@@ -17,12 +17,16 @@ const MealDb = () => {
     },[])
         
     const setDishItem=(props)=>{
-         setCount(count+1);
+         
         const clickedText=props;
         if (text.includes(clickedText)) {
             return;
           }
-        setText(prevText => prevText.concat(clickedText));
+          else{
+            setText(prevText => prevText.concat(clickedText));
+            setCount(count+1);
+          }
+        
 
     }
 
