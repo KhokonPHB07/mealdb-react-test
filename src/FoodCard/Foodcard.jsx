@@ -2,7 +2,7 @@ import React from 'react';
 import './FoodCard.css'
 
 const Foodcard = (props) => {
-    console.log(props);
+    // console.log(props);
     const{strMealThumb,strMeal,strInstructions}=props.singleFood;
     const setDishItem=props.setDishItem;
     return (

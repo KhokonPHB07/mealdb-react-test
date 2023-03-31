@@ -1,10 +1,12 @@
 import React from 'react';
 import './AddedDish.css';
 
-const AddedDish = () => {
+const AddedDish = (props) => {
+    const { setText, count } = props;
     return (
         <div className='dish-item'>
-            <h3>This is Dish item added : </h3>
+            <p>Dish added to cart: {setText || 'None'}</p>
+            <p>Total items in cart: {count}</p>
         </div>
     );
 };

@@ -5,17 +5,22 @@ import './MealDb.css'
 
 const MealDb = () => {
     const [food,setFood]=useState([]);
+    const [text,setText]=useState('');
+    const [count,setCount]=useState(0);
 
     useEffect( ()=>{
         fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=a')
         .then(res=>res.json())
         .then(data=>setFood(data.meals));
+        console.log(text);
         
     },[])
-
+        
     const setDishItem=(props)=>{
+         setCount(count+1);
+        const clickedText=`${props.strMeal}`;
+        setText(clickedText);
 
-        console.log(props);
     }
 
     return (
@@ -27,7 +32,7 @@ const MealDb = () => {
                 
             </div>
             <div>
-                <AddedDish></AddedDish>
+                <AddedDish setText={text} count={count}></AddedDish>
             </div>
         </div>
     );
