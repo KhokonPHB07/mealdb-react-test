@@ -5,7 +5,7 @@ import './MealDb.css'
 
 const MealDb = () => {
     const [food,setFood]=useState([]);
-    const [text,setText]=useState('');
+    const [text,setText]=useState([]);
     const [count,setCount]=useState(0);
 
     useEffect( ()=>{
@@ -18,8 +18,8 @@ const MealDb = () => {
         
     const setDishItem=(props)=>{
          setCount(count+1);
-        const clickedText=`${props.strMeal}`;
-        setText(clickedText);
+        const clickedText=props;
+        setText(prevText => prevText.concat(clickedText));
 
     }
 
