@@ -1,0 +1,7 @@
+.dish-item{
+    background-color: lightblue;
+    text-align: center;
+    border: 2px solid orangered;
+    border-radius: 15px;
+    margin: 25px;
+}
