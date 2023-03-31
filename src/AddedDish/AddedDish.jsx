@@ -5,8 +5,11 @@ const AddedDish = ({ setText, count }) => {
     
     return (
         <div className='dish-item'>
-            <p>Dish added to cart: {setText ? setText : 'None'} </p>
             <p>Total items in cart: {count}</p>
+            <div className='cart-item'>
+            {setText.map((text, index) => (<p key={index}>{text}</p>))}
+            {/* <p>{setText ? setText : 'None'} </p> */}
+            </div>
         </div>
     );
 };
